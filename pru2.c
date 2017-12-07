@@ -29,13 +29,11 @@ float toFloat(int n)
 	const int is_neg = n < 0;
 	int i, l = 0;
 
-#if 1
 	/* check for the two singular cases */
 	switch(n) {
 	case 0:		   return  0.0;
 	case 0x800000: return -1.0;
 	} /* switch */
-#endif
 
 	if (is_neg) n = -n; /* extract the sign */
 

@@ -42,5 +42,20 @@ int main(int argc, char **argv)
 				   -n, x2, n2);
 		} /* if */
 	} /* for */
+    if (n == N) {
+        float x = toFloat(-n);
+        int n1 = toInt(x);
+        if (-n != n1) {
+            fprintf(stderr,
+                   "Oops: test failed\n"
+                   "%8d => %12.7g => %8d\n",
+                    n, x, n1);
+            return 1;
+        }
+        if (flags & FLAG_DEBUG) {
+            printf("%8d => %12.7g => %8d\n",
+                    n, x, n1);
+        } /* if */
+    } /* if */
 	return n < N;
 } /* main */
