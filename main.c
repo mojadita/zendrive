@@ -29,15 +29,15 @@ int main(int argc, char **argv)
 		if (n != n1 || -n != n2) {
 			fprintf(stderr,
 				   "Oops: test failed\n"
-				   "%8d => %12.7g => %8d\n"
-				   "%8d => %12.7g => %8d\n",
+				   "%8d => %12.7f => %8d\n"
+				   "%8d => %12.7f => %8d\n",
 				    n, x1, n1,
 				   -n, x2, n2);
 			break;
 		} /* if */
 		if (flags & FLAG_DEBUG) {
-			printf("%8d => %12.7g => %8d\n"
-				   "%8d => %12.7g => %8d\n",
+			printf("%8d => %12.7f => %8d\n"
+				   "%8d => %12.7f => %8d\n",
 				    n, x1, n1,
 				   -n, x2, n2);
 		} /* if */
@@ -48,13 +48,13 @@ int main(int argc, char **argv)
         if (-n != n1) {
             fprintf(stderr,
                    "Oops: test failed\n"
-                   "%8d => %12.7g => %8d\n",
-                    n, x, n1);
+                   "%8d => %12.7f => %8d\n",
+                    -n, x, n1);
             return 1;
         }
         if (flags & FLAG_DEBUG) {
-            printf("%8d => %12.7g => %8d\n",
-                    n, x, n1);
+            printf("%8d => %12.7f => %8d\n",
+                    -n, x, n1);
         } /* if */
     } /* if */
 	return n < N;
